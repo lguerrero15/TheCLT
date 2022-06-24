@@ -75,20 +75,24 @@ print(mean(x.avg))
 print(sd(x.avg))
 ```
 
-It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
+It appears to me that the plot is unimodal because it has 1 peak and 1 highest point. the mean of the plot is 50.2 and the sd is 10.6 
 
 finally for 36 random samples.
 ```{r}
 numb = 36
-Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+Kdata <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
-It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
+It appears to me that the plot is unimodal because it has 1 highest peak. However, there is a large hump on the side of the large peak. the mean of the plot is 50.4 and the sd is 7.1
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
+
+What i observed from the plots are that the higher the random sample of population the smaller the deviation became and the closer the mean got to 50. 
 
 Be sure to comment on both the mean and standard deviation of the sample averages - the CLT makes a statement about what to expect from both.
 
