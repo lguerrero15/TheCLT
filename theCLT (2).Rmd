@@ -62,15 +62,17 @@ print(mean(x.avg))
 print(sd(x.avg))
 ```
 
-It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
+It appears to me that the plot is not unimodal because it has 2 peaks but they are not the same size. The peak to the left is the lower peak while the one to the right is the higher one. there is also two little humps on the side of the 2 peaks. The mean of the plot is 50.4 and the sd is 13.6.
 
 then 16 random samples
 ```{r}
 numb = 16
-Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+Kdata <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
 It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
