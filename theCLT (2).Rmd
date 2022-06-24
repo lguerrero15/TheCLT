@@ -33,15 +33,43 @@ densityplot(x.avg,main="sample size 2")
 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
- 
+ It appears to me that the plot is not unimodel because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
 
 Do this again for 4 random samples
+```{r}
+numb = 4
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
 
 Then again for 9 random samples
+```{r}
+numb = 9
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
 
 then 16 random samples
+```{r}
+numb = 16
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
 
 finally for 36 random samples.
+```{r}
+numb = 36
+Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+densityplot(x.avg,main="sample size 2")
+```
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
