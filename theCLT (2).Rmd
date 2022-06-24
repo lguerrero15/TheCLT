@@ -25,24 +25,31 @@ Now take 2 random samples of 1000 points of the kkardashtemp variable and form 1
 
 ```{r}
 numb = 2
-Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+Kdata <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
+ 
 Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Are all the peaks the same size? 
 
- It appears to me that the plot is not unimodel because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
+ It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. The mean of the plot is 49.2 and the SD is 29.5
 
 Do this again for 4 random samples
 ```{r}
-numb = 4
-Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+numb = 2
+Kdata <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
+
+It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
 
 Then again for 9 random samples
 ```{r}
@@ -53,6 +60,8 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
 ```
 
+It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
+
 then 16 random samples
 ```{r}
 numb = 16
@@ -62,6 +71,8 @@ x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
 ```
 
+It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
+
 finally for 36 random samples.
 ```{r}
 numb = 36
@@ -70,6 +81,8 @@ mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
 ```
+
+It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
 
 Write a summary paragraph describing what you observed and how it relates to the central limit theorem.
 
