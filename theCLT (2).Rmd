@@ -40,7 +40,7 @@ Describe the resulting plot -  is it unimodal?  How many peaks does it have?  Ar
 
 Do this again for 4 random samples
 ```{r}
-numb = 2
+numb = 4
 Kdata <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
@@ -49,15 +49,17 @@ print(mean(x.avg))
 print(sd(x.avg))
 ```
 
-It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
+It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size, it also has two little humps in the begging and the end of the plot. The mean of the plot is 50.3 and the sd is 20.6
 
 Then again for 9 random samples
 ```{r}
 numb = 9
-Kdata   <- sample(KK_data, size = numb*1000, replace=T)
+Kdata <- sample(KK_data, size = numb*1000, replace=T)
 mdata  <-matrix(Kdata,nrow=1000,ncol=numb)
 x.avg <- apply(mdata,1,mean)
 densityplot(x.avg,main="sample size 2")
+print(mean(x.avg))
+print(sd(x.avg))
 ```
 
 It appears to me that the plot is not unimodal because it has 3 peaks but they are not the same size. The peak in the middle is the highest peak while the two next to it are the same size. 
